@@ -8,6 +8,64 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Rose Website</title>
 </head>
+	<style>
+		
+    /* English practice question and answer styling */
+    .english-practice {
+        --qa-navy: #071a3d;
+        --qa-panel: #10274b;
+        --qa-panel-light: #15345e;
+        --qa-gold: #ffd966;
+        --qa-blue: #60a5fa;
+        max-width: 1180px;
+        margin: 36px auto;
+        padding: 28px clamp(14px, 3vw, 34px);
+        color: #f8fafc;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: linear-gradient(145deg, #071a3d, #0b2550);
+        border: 1px solid #31578c;
+        border-radius: 18px;
+        box-shadow: 0 12px 32px rgba(0,0,0,.25);
+        box-sizing: border-box;
+    }
+    .english-practice * { box-sizing: border-box; }
+    .practice-heading { text-align: center; margin: 0 auto 28px; max-width: 760px; }
+    .practice-heading .eyebrow { color: var(--qa-blue); font-size: 12px; font-weight: 800; letter-spacing: 2.5px; margin: 0 0 8px; }
+    .practice-heading h2 { color: #fff; font-size: clamp(25px, 4vw, 36px); line-height: 1.25; margin: 0 0 12px; font-weight: 850; }
+    .practice-intro { color: #dbeafe; font-size: 15px; line-height: 1.7; margin: 0; }
+    .qa-category { border: 1px solid #31578c; border-radius: 13px; margin: 16px 0; overflow: hidden; background: rgba(4, 18, 43, .55); }
+    .qa-category > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 17px 18px; color: var(--qa-gold); font-size: clamp(16px, 2.3vw, 21px); font-weight: 800; line-height: 1.45; }
+    .qa-category > summary::-webkit-details-marker { display: none; }
+    .qa-category > summary::after { content: "+"; margin-left: auto; color: var(--qa-gold); font-size: 27px; line-height: 1; }
+    .qa-category[open] > summary::after { content: "−"; }
+    .qa-category > summary:hover { background: #12315b; }
+    .category-number { display: inline-grid; place-items: center; flex: 0 0 40px; height: 40px; border-radius: 10px; background: #1b4578; color: #fff; font-size: 14px; }
+    .category-count { margin-left: auto; padding: 5px 9px; border: 1px solid #466a98; border-radius: 999px; color: #dbeafe; font-size: 11px; font-weight: 700; white-space: nowrap; }
+    .qa-category > summary .category-count { margin-left: 0; }
+    .qa-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; padding: 4px 16px 18px; }
+    .qa-card { min-width: 0; background: var(--qa-panel); border: 1px solid #23466f; border-left: 4px solid var(--qa-blue); border-radius: 10px; padding: 15px 16px; transition: border-color .2s ease, transform .2s ease; }
+    .qa-card:hover { border-color: var(--qa-blue); transform: translateY(-2px); }
+    .question { display: flex; align-items: flex-start; gap: 10px; }
+    .qa-label { display: inline-grid; place-items: center; flex: 0 0 34px; min-height: 28px; padding: 3px; background: #1e4779; border-radius: 7px; color: #bfdbfe; font-size: 11px; font-weight: 900; }
+    .question h3 { color: #fff; font-size: 15px; font-weight: 750; line-height: 1.6; margin: 1px 0 12px; overflow-wrap: anywhere; }
+    .answer { border-top: 1px solid #2b4c74; padding-top: 11px; }
+    .answer-label { display: block; color: var(--qa-gold); font-size: 10px; letter-spacing: 1.5px; font-weight: 900; margin-bottom: 5px; }
+    .answer p { color: #e2eaf5; font-size: 14px; line-height: 1.8; margin: 0; overflow-wrap: anywhere; }
+    .answer .missing-answer { color: #fca5a5; font-style: italic; }
+    @media (max-width: 760px) {
+        .english-practice { margin: 20px 10px; padding: 20px 12px; border-radius: 13px; }
+        .qa-grid { grid-template-columns: 1fr; padding: 4px 10px 12px; gap: 10px; }
+        .qa-category > summary { padding: 13px 11px; gap: 9px; }
+        .category-number { flex-basis: 32px; height: 32px; }
+        .category-count { font-size: 10px; padding: 4px 7px; }
+        .qa-card { padding: 13px; }
+    }
+    @media (max-width: 420px) {
+        .qa-category > summary { flex-wrap: wrap; }
+        .qa-category > summary .category-count { margin-left: 41px; }
+        .qa-category > summary::after { margin-left: auto; }
+    }
+	</style>
 <body>
     <nav class="navbar">
         <input type="checkbox" id="check">
